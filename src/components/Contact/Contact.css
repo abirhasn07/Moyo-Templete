@@ -1,0 +1,83 @@
+.contact {
+  margin-top: 70px;
+  padding-bottom: 70px;
+}
+
+.contact-title {
+  font-size: 3rem;
+  text-align: center;
+  padding: 35px 0 0 0;
+  opacity: 0.8;
+}
+
+.contact-subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: 0px 0 25px 0px;
+  text-align: center;
+  opacity: 0.9;
+}
+
+form {
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 180%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid rgb(87, 87, 87);
+  outline: none;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.checkbox > div {
+  width: 30%;
+  text-align: center;
+  border: 1px solid rgb(130, 128, 128);
+  margin: 5px 10px;
+  color: rgb(130, 128, 128);
+}
+
+#submit {
+  padding: 10px;
+  margin-top: 15px;
+  border: none;
+  background-color: var(--blue);
+  color: var(--white);
+  font-family: inherit;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .checkbox {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .checkbox > div {
+    width: 33%;
+    font-size: 1.1rem;
+  }
+  .checkbox > div > input {
+    margin-right: 5px;
+  }
+}

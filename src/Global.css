@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --blue: #5340ff;
+  --green: #60cc96;
+  --orange: #ff4f11;
+  --fade: #f8f4f2;
+  --blueWhite: #fafaff;
+  --white: #ffff;
+  --black: #000;
+  --transition: 0.5s ease;
+  --team: #f0eae8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  width: 95vw;
+  max-width: 1980px;
+  margin: 0 auto;
+}
+
+/* page styling  */
+
+.myproject-container {
+  margin-top: 60px;
+  background-color: var(--fade);
+  padding: 0 35px;
+  text-align: center;
+  padding-bottom: 25px;
+}
+.project-name {
+  font-size: 3rem;
+  font-weight: 500;
+  text-align: center;
+  padding-top: 70px;
+}
+.category {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 300;
+  padding: 15px 0;
+}
+
+.home-btn {
+  padding: 10px;
+  margin: 15px 0;
+  border: none;
+  background-color: var(--orange);
+  color: var(--white);
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+.my-project-sub-container {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  padding: 70px 30px;
+}
+.img {
+  width: 50%;
+}
+.img > img {
+  width: 100%;
+}
+.project-description {
+  width: 40%;
+  margin: 0 auto;
+}
+.project-name2 {
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-top: 0;
+  font-size: 2rem;
+  padding: 15px 0;
+}
+.category2 {
+  font-size: 1rem;
+  padding: 5px 0;
+}
+.project-description > h3 {
+  margin-top: 25px;
+}
+
+@media (max-width: 768px) {
+  .my-project-sub-container {
+    flex-direction: column;
+    padding: 70px 20px;
+  }
+  .img {
+    width: 100%;
+  }
+  .project-description {
+    width: 90%;
+    margin: 0 auto;
+  }
+}

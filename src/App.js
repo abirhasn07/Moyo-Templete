@@ -1,25 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react'
+import {
+  BrowserRouter as Router, Route, Switch
+} from "react-router-dom"
+import project from './database/projects'
+import teamData from './database/team.js'
+import './Global.css'
+import Home from './Pages/Home.jsx'
+import MyProject from './Pages/MyProject'
 
-function App() {
+
+const App = () => {
+  const [projectData, setProjectData] = useState(project)
+  const [team, setTeam] = useState(teamData)
+  const [testimonial, setTestimonial] = useState([])
+  // console.log(testimonial);
+  useEffect(()=>{
+    fetch('https://testimonialapi.toolcarton.com/api')
+    .then(data=>data.json())
+    .then(data=>setTestimonial(data))
+   
+  },[])
+
+  // gsap 
+
+  useEffect(()=>{
+
+
+  },[])
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+    <Router>
+    <Switch> 
+    <Route path="/" exact>
+     <Home 
+     projectData={projectData}
+     data={testimonial}
+     team={team}
+     />
+     </Route>
+     <Route path="/project/:id">
+     <MyProject projectData={projectData}/>
+     </Route>
+     </Switch>
+     </Router>
+    </>
+  )
 }
 
-export default App;
+export default App
